@@ -1,0 +1,454 @@
+/* ROOT */
+:root {
+  /* COLOR */
+  --white: #fff;
+  --gray: #ebebeb;
+  --gray-2: #919191;
+  --black: #000;
+
+  /* FONT SIZE */
+  --fs-1: 3rem;
+  --fs-2: 2rem;
+  --fs-3: 1.5rem;
+  --fs-4: 1.2rem;
+  --fs-5: 1rem;
+  --fs-6: 0.8rem;
+
+  /* FONT WEIGHT */
+  --fw-5: 500;
+  --fw-7: 700;
+  --fw-9: 900;
+
+  /* SHADOW */
+  --sd-1: 0 0.2px 3px black;
+  --sd-2: 1px 1px 3px black;
+}
+
+/* RESET */
+* {
+  font-family: "Poppins", Helvetica, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  overflow-x: hidden;
+  font-size: 16px;
+}
+* a {
+  color: black;
+  text-decoration: none;
+}
+
+.container {
+  padding-inline: 5vw;
+  width: 100vw;
+}
+.heading-part {
+  text-transform: uppercase;
+  margin-top: 1em;
+  font-size: var(--fs-3);
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  width: 100vw;
+  z-index: 5;
+  box-shadow: var(--sd-1);
+}
+.h-top {
+  height: 30px;
+  background-color: var(--gray);
+  text-align: end;
+}
+
+.h-top a {
+  font-size: var(--fs-6);
+  display: inline-block;
+  line-height: 30px;
+  margin-left: 10px;
+}
+
+.h-bottom {
+  height: 4rem;
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+}
+.h-left {
+  display: flex;
+  align-items: center;
+}
+.h-left img {
+  width: 30px;
+  height: 30px;
+}
+.navbar-list {
+  margin-left: 1.5rem;
+}
+.navbar-list li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.navbar-list li a {
+  color: var(--black);
+  font-weight: var(--fw-7);
+}
+
+.h-right {
+  display: flex;
+  align-items: center;
+}
+
+.h-right .search {
+  position: relative;
+  width: 15vmax;
+  margin-right: 10px;
+}
+.h-right .search-field {
+  width: 15vmax;
+  height: 30px;
+  background-color: var(--gray);
+  color: var(--gray-2);
+  padding: 0 10px;
+  border: none;
+}
+
+.h-right span {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: var(--gray-2);
+}
+
+.h-right h2 a {
+  margin-right: 5px;
+  color: black;
+}
+
+/* HERO */
+.hero {
+  background-image: url(img/hero.jpg);
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+.hero h1 {
+  font-size: var(--fs-1);
+  color: var(--white);
+  margin-bottom: 0.2em;
+}
+.hero p {
+  font-size: var(--fs-2);
+  color: var(--white);
+  margin-bottom: 1.5em;
+}
+
+.hero button {
+  font-size: var(--fs-5);
+  text-transform: capitalize;
+  font-weight: var(--fw-7);
+  padding: 1em 1.2em;
+  border: none;
+  transition: 0.3s;
+}
+.hero button:hover {
+  background-color: var(--black);
+  color: var(--gray);
+}
+/* BEST SELLER */
+
+.best {
+  height: 75vh;
+  margin: 10px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-areas:
+    "b-1 b-3 b-4"
+    "b-2 b-3 b-5";
+  gap: 10px;
+}
+
+.best > a {
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+}
+
+.best-1 {
+  background-image: url(img/best/genevalow.jpg);
+  grid-area: b-1;
+}
+.best-2 {
+  background-image: url(img/best/genevahigh.jpg);
+  grid-area: b-2;
+}
+.best-3 {
+  background-image: url(img/best/axel.jpg);
+  grid-area: b-3;
+}
+.best-4 {
+  background-image: url(img/best/leacher.jpg);
+  grid-area: b-4;
+}
+.best-5 {
+  background-image: url(img/best/best-gibson.jpg);
+  grid-area: b-5;
+}
+
+.best-title {
+  margin: 0 0 1em 1.2em;
+  color: var(--white);
+  font-size: var(--fs-3);
+  font-weight: var(--fw-7);
+  text-shadow: var(--sd-2);
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.best-title:hover {
+  color: var(--gray-2);
+}
+
+/* NEW ARRIVALS */
+.new {
+  height: 75vh;
+  margin: 10px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.new > a {
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+}
+
+.new-1 {
+  background-image: url(img/new-elektra.png);
+}
+
+.new-2 {
+  background-image: url(img/new-pascal.png);
+}
+
+.new-title {
+  color: var(--white);
+  font-size: var(--fs-2);
+  font-weight: var(--fw-7);
+  text-shadow: var(--sd-2);
+  text-transform: uppercase;
+}
+
+/* CATEGORY */
+.category {
+  height: 80vh;
+  margin: 10px auto;
+  display: grid;
+  gap: 10px;
+}
+
+.category > a {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.category-1 {
+  background-image: url(img/category/category-pria.jpg);
+  grid-area: c-1;
+}
+.category-2 {
+  background-image: url(img/category-2.jpg);
+  grid-area: c-2;
+}
+.category-3 {
+  background-image: url(img/category-3.jpg);
+  grid-area: c-3;
+}
+.category-4 {
+  background-image: url(img/category-4.jpg);
+  grid-area: c-4;
+}
+.category-5 {
+  background-image: url(img/category/category-wanita.jpg);
+  grid-area: c-5;
+}
+
+.category-title-1 {
+  background-color: var(--white);
+  font-size: var(--fs-4);
+  font-weight: var(--fw-7);
+  text-transform: uppercase;
+  color: var(--black);
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 0.5em 2em;
+  transition: 0.3s;
+}
+.category-title-1:hover {
+  background-color: var(--black);
+  color: var(--gray);
+}
+
+.category-title-2 {
+  font-size: var(--fs-4);
+  font-weight: var(--fw-5);
+  text-transform: uppercase;
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-shadow: var(--sd-2);
+}
+.category-title-2:hover {
+  color: var(--gray);
+}
+
+/* FOOTER */
+.foot-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  background-color: var(--gray);
+  margin-top: 10rem;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+.f-text {
+  margin-bottom: 10px;
+}
+.f-text > h3 {
+  text-transform: uppercase;
+  font-size: var(--fs-5);
+}
+.f-text > a {
+  width: fit-content;
+  display: block;
+  text-transform: capitalize;
+  font-size: var(--fs-5);
+  margin: 10px 0;
+}
+
+.sosmed-logo {
+  width: 165px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.sosmed-logo img {
+  width: 40px;
+}
+.sosmed-logo > a {
+  margin-top: 10px;
+  margin-right: 15px;
+}
+
+footer p {
+  background-color: var(--gray-2);
+  padding: 5px 0;
+  font-size: var(--fs-6);
+  color: var(--gray);
+}
+
+/* RESVONSIVE BREAKPOINT */
+@media (min-width: 769px) {
+  .new-title {
+    margin: 0 0 2em 3em;
+  }
+
+  .category {
+    height: 80vh;
+  }
+  .category {
+    grid-template-areas:
+      "c-1 c-2 c-5"
+      "c-1 c-3 c-5"
+      "c-1 c-4 c-5";
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    overflow-x: hidden;
+    font-size: 14px;
+  }
+
+  .h-top {
+    display: none;
+  }
+  .navbar {
+    display: none;
+  }
+
+  .best {
+    height: 120vh;
+    grid-template-areas:
+      "b-3"
+      "b-1"
+      "b-2"
+      "b-4"
+      "b-5";
+  }
+
+  .new-title {
+    margin: 0 0 1em 1em;
+  }
+
+  .category {
+    height: 80vh;
+    grid-template-areas:
+      "c-1 c-2"
+      "c-1 c-2"
+      "c-1 c-3"
+      "c-5 c-3"
+      "c-5 c-4"
+      "c-5 c-4";
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 12px;
+  }
+
+  .new {
+    grid-template-columns: 1fr;
+  }
+
+  .best {
+    height: 120vh;
+    grid-template-areas:
+      "b-3"
+      "b-1"
+      "b-2"
+      "b-4"
+      "b-5";
+  }
+
+  .category {
+    height: 180vh;
+
+    grid-template-areas:
+      "c-1"
+      "c-1"
+      "c-1"
+      "c-5"
+      "c-5"
+      "c-5"
+      "c-2"
+      "c-3"
+      "c-4";
+  }
+}
