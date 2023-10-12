@@ -1,0 +1,80 @@
+.product-page {
+  padding-top: 100px;
+  margin: 0 auto;
+}
+
+.product-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-img {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-color: aqua;
+  padding: 20px;
+}
+
+.img-side {
+  display: flex;
+  flex-direction: column;
+  max-width: 80px;
+}
+
+.thumbnail {
+  cursor: pointer;
+  min-width: 70px;
+  margin-bottom: 10px;
+}
+.main-img {
+  margin: 0 10px 10px 20px;
+  max-width: 500px;
+}
+#main {
+  width: 500px;
+}
+
+.product-title {
+  width: 100%;
+  height: 800px;
+  background-color: antiquewhite;
+}
+
+.product-desc {
+  width: 100%;
+  height: 800px;
+  background-color: antiquewhite;
+}
+
+.product-title-side {
+  display: none;
+  padding: 20px;
+}
+.price-1 {
+  text-decoration: line-through;
+  color: red;
+}
+
+/* RESVONSIVE BREAKPOINT */
+@media (min-width: 769px) {
+  .product-page {
+    display: flex;
+  }
+  .product-content {
+    flex: 55%;
+  }
+  .product-title {
+    display: none;
+  }
+  .product-title-side {
+    display: block;
+    flex: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 500px) {
+}
