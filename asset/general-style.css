@@ -1,0 +1,196 @@
+:root {
+  /* COLOR */
+  --white: #fff;
+  --gray: #ebebeb;
+  --gray-2: #919191;
+  --black: #000;
+
+  /* FONT SIZE */
+  --fs-1: 3rem;
+  --fs-2: 2rem;
+  --fs-3: 1.5rem;
+  --fs-4: 1.2rem;
+  --fs-5: 1rem;
+  --fs-6: 0.8rem;
+
+  /* FONT WEIGHT */
+  --fw-5: 500;
+  --fw-7: 700;
+  --fw-9: 900;
+
+  /* SHADOW */
+  --sd-1: 0 0.2px 3px black;
+  --sd-2: 1px 1px 3px black;
+}
+
+/* RESET */
+* {
+  font-family: "Poppins", Helvetica, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  overflow-x: hidden;
+  font-size: 16px;
+}
+* a {
+  color: black;
+  text-decoration: none;
+}
+
+.container {
+  padding-inline: 5vw;
+  width: 100vw;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  width: 100vw;
+  z-index: 5;
+  box-shadow: var(--sd-1);
+}
+.h-top {
+  height: 30px;
+  background-color: var(--gray);
+  text-align: end;
+}
+
+.h-top a {
+  font-size: var(--fs-6);
+  display: inline-block;
+  line-height: 30px;
+  margin-left: 10px;
+}
+
+.h-bottom {
+  height: 4rem;
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+}
+.h-left {
+  display: flex;
+  align-items: center;
+}
+.h-left img {
+  width: 30px;
+  height: 30px;
+}
+.navbar-list {
+  margin-left: 1.5rem;
+}
+.navbar-list li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.navbar-list li a {
+  color: var(--black);
+  font-weight: var(--fw-7);
+}
+
+.h-right {
+  display: flex;
+  align-items: center;
+}
+
+.h-right .search {
+  position: relative;
+  width: 15vmax;
+  margin-right: 10px;
+}
+.h-right .search-field {
+  width: 15vmax;
+  height: 30px;
+  background-color: var(--gray);
+  color: var(--gray-2);
+  padding: 0 10px;
+  border: none;
+}
+
+.h-right span {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: var(--gray-2);
+}
+
+.h-right h2 a {
+  margin-right: 5px;
+  color: black;
+}
+
+/* FOOTER */
+.foot-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  background-color: var(--gray);
+  margin-top: 10rem;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+.f-text {
+  margin-bottom: 10px;
+}
+.f-text > h3 {
+  text-transform: uppercase;
+  font-size: var(--fs-5);
+}
+.f-text > a {
+  width: fit-content;
+  display: block;
+  text-transform: capitalize;
+  font-size: var(--fs-5);
+  margin: 10px 0;
+}
+
+.sosmed-logo {
+  width: 165px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.sosmed-logo img {
+  width: 40px;
+}
+.sosmed-logo > a {
+  margin-top: 10px;
+  margin-right: 15px;
+}
+
+footer p {
+  background-color: var(--gray-2);
+  padding: 5px 0;
+  font-size: var(--fs-6);
+  color: var(--gray);
+}
+
+/* RESVONSIVE BREAKPOINT */
+@media (min-width: 769px) {
+}
+
+@media (max-width: 768px) {
+  html {
+    overflow-x: hidden;
+    font-size: 14px;
+  }
+
+  .h-top {
+    display: none;
+  }
+  .navbar {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 12px;
+  }
+}

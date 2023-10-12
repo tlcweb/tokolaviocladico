@@ -1,0 +1,50 @@
+.etalase {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.etalase a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: fit-content;
+  min-width: 125px;
+  max-width: 250px;
+  margin: 10px;
+  border: 1px solid black;
+}
+
+.etalase a img {
+  width: 100%;
+}
+
+.etalase a h4 {
+  background-color: aqua;
+  margin: 0;
+  padding: 5px 0;
+}
+.etalase a h4 span {
+  background-color: #fa0423;
+  margin-right: 5px;
+  padding: 6px;
+}
+
+/* RESVONSIVE */
+@media (max-width: 768px) {
+  .etalase {
+    padding-top: 70px;
+  }
+}
+
+@media (max-width: 550px) {
+  .etalase {
+    justify-content: center;
+  }
+
+  .etalase a {
+    margin: 5px;
+    width: 45%;
+  }
+}
